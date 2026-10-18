@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2.1">
 </head>
 <body>
 
@@ -79,20 +79,35 @@
             </a>
 
             <nav class="nav-menu" id="navMenu">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#book" class="nav-link">Book Cab</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#routes" class="nav-link">Routes</a>
-                <a href="#why-us" class="nav-link">Why FindGo</a>
-                <a href="#reviews" class="nav-link">Reviews</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <div class="nav-links-wrapper">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#book" class="nav-link">Book Cab</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#routes" class="nav-link">Routes</a>
+                    <a href="#why-us" class="nav-link">Why FindGo</a>
+                    <a href="#reviews" class="nav-link">Reviews</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="mobile-drawer-actions">
+                    <a href="tel:+917289034489" class="btn btn-outline-nav btn-block">
+                        <i class="fa-solid fa-phone text-gold"></i> Call 72890 34489
+                    </a>
+                    <a href="https://wa.me/917289034489?text=Hi%20FindGo%20Travel,%20I%20want%20to%20book%20a%20cab." target="_blank" class="btn btn-nav-wa btn-block">
+                        <i class="fa-brands fa-whatsapp"></i> Book on WhatsApp
+                    </a>
+                </div>
             </nav>
 
             <div class="header-actions">
-                <a href="tel:+917289034489" class="btn btn-outline-nav"><i class="fa-solid fa-phone"></i> Call Now</a>
-                <a href="https://wa.me/917289034489?text=Hi%20FindGo%20Travel,%20I%20want%20to%20book%20a%20cab." target="_blank" class="btn btn-nav-wa"><i class="fa-brands fa-whatsapp"></i> Book on WhatsApp</a>
-                <button class="mobile-hamburger" id="mobileHamburger" aria-label="Toggle Navigation Menu">
-                    <i class="fa-solid fa-bars"></i>
+                <a href="tel:+917289034489" class="btn btn-outline-nav desktop-only-btn"><i class="fa-solid fa-phone"></i> Call Now</a>
+                <a href="https://wa.me/917289034489?text=Hi%20FindGo%20Travel,%20I%20want%20to%20book%20a%20cab." target="_blank" class="btn btn-nav-wa desktop-only-btn"><i class="fa-brands fa-whatsapp"></i> Book on WhatsApp</a>
+                <a href="tel:+917289034489" class="mobile-quick-call" aria-label="Call 7289034489">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <button class="mobile-hamburger" id="mobileHamburger" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                    <span class="hamburger-line line-1"></span>
+                    <span class="hamburger-line line-2"></span>
+                    <span class="hamburger-line line-3"></span>
                 </button>
             </div>
         </div>
@@ -844,18 +859,20 @@
 
     <!-- Sticky Mobile Actions Bar -->
     <div class="mobile-sticky-bar">
-        <a href="tel:+917289034489" class="sticky-act-btn sticky-call">
-            <i class="fa-solid fa-phone"></i> CALL
-        </a>
-        <a href="https://wa.me/917289034489?text=Hi%20FindGo%20Travel,%20I%20want%20to%20book%20a%20cab." target="_blank" class="sticky-act-btn sticky-wa">
-            <i class="fa-brands fa-whatsapp"></i> WHATSAPP
-        </a>
-        <a href="#book" class="sticky-act-btn sticky-book">
+        <div class="sticky-icon-group">
+            <a href="tel:+917289034489" class="sticky-act-btn sticky-call sticky-icon-only" aria-label="Call Helpline 7289034489">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+            <a href="https://wa.me/917289034489?text=Hi%20FindGo%20Travel,%20I%20want%20to%20book%20a%20cab." target="_blank" class="sticky-act-btn sticky-wa sticky-icon-only" aria-label="Chat on WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+        <a href="#book" class="sticky-act-btn sticky-book sticky-main-cta">
             <i class="fa-solid fa-car"></i> BOOK CAB
         </a>
     </div>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="script.js?v=2.0"></script>
 </body>
 </html>

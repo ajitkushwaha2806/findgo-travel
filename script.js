@@ -227,21 +227,43 @@ function showError(errorId, inputElement) {
     }
 }
 
-// Mobile Hamburger Menu Toggle
+// Mobile Hamburger Menu Toggle & Accessibility
 function setupMobileMenu() {
     const hamburger = document.getElementById('mobileHamburger');
     const navMenu = document.getElementById('navMenu');
 
     if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
+        const toggleMenu = (open) => {
+            const shouldOpen = open !== undefined ? open : !navMenu.classList.contains('show');
+            navMenu.classList.toggle('show', shouldOpen);
+            hamburger.classList.toggle('is-active', shouldOpen);
+            hamburger.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+        };
+
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
         });
 
-        // Close menu on nav link click
-        document.querySelectorAll('.nav-link').forEach(link => {
+        // Close menu on nav link click or drawer action click
+        document.querySelectorAll('.nav-link, .mobile-drawer-actions .btn').forEach(link => {
             link.addEventListener('click', () => {
-                navMenu.classList.remove('show');
+                toggleMenu(false);
             });
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('show') && !navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                toggleMenu(false);
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('show')) {
+                toggleMenu(false);
+            }
         });
     }
 }
