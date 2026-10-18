@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FF9900"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0D1117"/>
+  <!-- Taxi Icon -->
+  <path d="M16 38 L20 25 C20.8 22.8 22.9 21.3 25.3 21.3 L38.7 21.3 C41.1 21.3 43.2 22.8 44 25 L48 38 C49.1 38 50 38.9 50 40 L50 47 C50 48.1 49.1 49 48 49 L46 49 C44.9 49 44 48.1 44 47 L44 45 L20 45 L20 47 C20 48.1 19.1 49 18 49 L16 49 C14.9 49 14 48.1 14 47 L14 40 C14 38.9 14.9 38 16 38 Z" fill="url(#goldGrad)"/>
+  <!-- Windows -->
+  <path d="M22.5 25 L24.5 32 L39.5 32 L41.5 25 Z" fill="#0D1117"/>
+  <!-- Headlights -->
+  <circle cx="21" cy="40" r="2.5" fill="#FFFFFF"/>
+  <circle cx="43" cy="40" r="2.5" fill="#FFFFFF"/>
+  <!-- Taxi Top Sign -->
+  <rect x="27" y="16" width="10" height="4" rx="1.5" fill="url(#goldGrad)"/>
+</svg>
